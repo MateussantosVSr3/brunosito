@@ -221,23 +221,33 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Architecture showcase photo */}
-            <div className="position-showcase" data-reveal>
-              <figure className="showcase-banner">
-                <img
-                  src="/photo-architecture.jpg"
-                  alt="Consultoria estruturada e ambiente de negócios em São Paulo"
-                  width="1280"
-                  height="640"
-                />
-                <figcaption>
+            {/* Editorial process photo card */}
+            <div className="position-editorial-card" data-reveal>
+              <div className="position-editorial-copy">
+                <span className="mini-label">MÉTODO APLICADO</span>
+                <h3>Menos reuniões improdutivas.<br />Mais entregas palpáveis.</h3>
+                <p>
+                  Negócios em fase de crescimento ou reestruturação não precisam de apresentações teóricas de 200 slides. Precisam de processos desenhados na prática, prioridades pactuadas com quem executa e cadência contínua de acompanhamento.
+                </p>
+                <div className="position-stats-mini">
                   <div>
-                    <span className="mini-label">MÉTODO &amp; DISCIPLINA OPERACIONAL</span>
-                    <p>Consultoria focada em eficiência operacional, redesenho de processos e gestão de entregas.</p>
+                    <strong>Foco Operacional</strong>
+                    <span>Rotinas reais &amp; eliminação de atrito</span>
                   </div>
-                  <span className="showcase-tag">SÃO PAULO · SP</span>
-                </figcaption>
-              </figure>
+                  <div>
+                    <strong>Cadência Semanal</strong>
+                    <span>Acompanhamento direto e correção de rota</span>
+                  </div>
+                </div>
+              </div>
+              <div className="position-editorial-media">
+                <img
+                  src="/photo-roadmap.jpg"
+                  alt="Planejamento de processos, roadmaps e entregas operacionais"
+                  width="900"
+                  height="480"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -277,6 +287,26 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            {/* Visual banner for Section 02: Governance & Cross-functional Alignment */}
+            <div className="services-visual-banner" data-reveal>
+              <div className="services-banner-media">
+                <img
+                  src="/photo-governance.jpg"
+                  alt="Alinhamento estratégico e governança de projetos em andamento"
+                  width="900"
+                  height="500"
+                />
+              </div>
+              <div className="services-banner-copy">
+                <span className="mini-label">SINCRONIA OPERACIONAL</span>
+                <h3>Integração real entre processos, indicadores e tecnologia</h3>
+                <p>
+                  Quando as áreas não operam sob as mesmas métricas, o retrabalho explode e a liderança se desgasta apagando incêndios. Nossa atuação conecta as frentes operacionais: garantindo que as metas de negócio sejam sustentadas por rotinas enxutas, critérios de aceite claros e tecnologia bem dimensionada.
+                </p>
+                <a className="button button-gold" href="#contato">Converse sobre seu projeto</a>
+              </div>
             </div>
           </div>
         </section>
@@ -412,7 +442,7 @@ export default function Home() {
               </div>
               <figure className="results-feature-image">
                 <img
-                  src="/photo-results.jpg"
+                  src="/photo-analytics.jpg"
                   alt="Alinhamento executivo de resultados, indicadores e metas operacionais"
                   width="1100"
                   height="480"

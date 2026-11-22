@@ -12,56 +12,117 @@
    ENHANCED VISUAL ASSETS & COMPANY LOGOS
    ========================================================================== */
 
-/* Architecture Showcase Banner */
-.position-showcase {
+/* Position Editorial Card (Section 01) */
+.position-editorial-card {
   margin-top: 55px;
-}
-.showcase-banner {
-  position: relative;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
   border: 1px solid var(--line);
-  background: var(--navy);
+  background: #ffffff;
   overflow: hidden;
+  align-items: stretch;
 }
-.showcase-banner img {
+.position-editorial-copy {
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.position-editorial-copy .mini-label {
+  color: #8a744b;
+  margin-bottom: 12px;
+}
+.position-editorial-copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+.position-editorial-copy p {
+  font-size: 0.925rem;
+  line-height: 1.85;
+  color: #5b626e;
+  margin-bottom: 22px;
+}
+.position-stats-mini {
+  display: flex;
+  gap: 28px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  padding-top: 18px;
+}
+.position-stats-mini div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.position-stats-mini strong {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.position-stats-mini span {
+  font-size: 0.775rem;
+  color: #7a8290;
+}
+.position-editorial-media {
+  position: relative;
+  background: var(--navy);
+  min-height: 320px;
+}
+.position-editorial-media img {
   width: 100%;
-  height: auto;
-  max-height: 480px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Services Visual Banner (Section 02) */
+.services-visual-banner {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  border: 1px solid #ffffff24;
+  background: #0d1422;
+  overflow: hidden;
+  align-items: center;
+}
+.services-banner-media {
+  position: relative;
+  min-height: 320px;
+  height: 100%;
+}
+.services-banner-media img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
   filter: brightness(0.95) contrast(1.05);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.showcase-banner:hover img {
-  transform: scale(1.015);
+.services-banner-copy {
+  padding: 44px 40px;
 }
-.showcase-banner figcaption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 24px;
-  background: #ffffff;
-  border-top: 1px solid var(--line);
-  color: #555d6b;
+.services-banner-copy .mini-label {
+  color: var(--gold-light);
+  margin-bottom: 12px;
 }
-.showcase-banner figcaption .mini-label {
-  display: block;
-  margin-bottom: 4px;
-  color: #8a744b;
+.services-banner-copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
-.showcase-banner figcaption p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: #4c5460;
-}
-.showcase-tag {
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  color: var(--gold);
-  white-space: nowrap;
+.services-banner-copy p {
+  font-size: 0.925rem;
+  line-height: 1.85;
+  color: #a7acb7;
+  margin-bottom: 24px;
 }
 
 /* Editorial Feature Card */
@@ -493,5 +554,26 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .position-editorial-card {
+    grid-template-columns: 1fr;
+  }
+  .services-visual-banner {
+    grid-template-columns: 1fr;
+  }
+  .position-editorial-media, .services-banner-media {
+    min-height: 260px;
+  }
+}
+@media (max-width: 700px) {
+  .position-editorial-copy, .services-banner-copy {
+    padding: 28px 20px;
+  }
+  .position-stats-mini {
+    flex-direction: column;
+    gap: 12px;
   }
 }
