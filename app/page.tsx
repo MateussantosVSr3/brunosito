@@ -1,26 +1,90 @@
-import { Blocks, Workflow, ChartNoAxesCombined, ScanLine, Check, Plus } from 'lucide-react';
+import { Blocks, Workflow, ChartNoAxesCombined, ScanLine, Check, Plus, ArrowUpRight } from 'lucide-react';
 import { Brand, Header, MotionEffects, ContactForm } from '@/components/interactive';
 import { navigation, siteConfig } from '@/lib/site-config';
 
 const services = [
-  { icon: Blocks, title: 'Estruturação de negócios', text: 'Da validação de mercado à construção do MVP, organizando entregáveis, fornecedores de tecnologia e modelos de receita.', tag: 'DO CONCEITO À OPERAÇÃO' },
-  { icon: Workflow, title: 'Gestão de processos', text: 'Redesenho de processos e organização operacional para simplificar rotinas, aumentar eficiência e melhorar a execução.', tag: 'MENOS FRICÇÃO. MAIS FLUIDEZ.' },
-  { icon: ChartNoAxesCombined, title: 'Indicadores e estratégia', text: 'Implantação de indicadores de gestão e desdobramento de metas por área, conectando planejamento estratégico à operação.', tag: 'CLAREZA PARA DECIDIR' },
-  { icon: ScanLine, title: 'Governança de projetos', text: 'Definição de critérios de priorização, marcos de acompanhamento e critérios de aceite para dar previsibilidade às entregas.', tag: 'DIREÇÃO PARA ENTREGAR' },
+  {
+    icon: Blocks,
+    title: 'Estruturação de novos negócios & startups',
+    lead: 'Da modelagem e validação de hipóteses à tração da operação.',
+    text: 'Apoiamos fundadores, executivos e investidores na transformação de conceitos em empresas organizadas e escaláveis. Estruturamos desde a validação de proposta de valor e público-alvo até a homologação de fornecedores tecnológicos, desenho do MVP e definição de modelos de receita sustentáveis.',
+    deliverables: [
+      'Validação de hipóteses, mercado e público-alvo',
+      'Definição de escopo, arquitetura e roadmap do MVP',
+      'Seleção, homologação e gestão de fornecedores tech',
+      'Modelagem de monetização, precificação e unit economics'
+    ],
+    tag: 'DO CONCEITO À OPERAÇÃO'
+  },
+  {
+    icon: Workflow,
+    title: 'Redesenho e gestão de processos',
+    lead: 'Eliminação de gargalos, rotinas simplificadas e fluidez entre áreas.',
+    text: 'Mapeamento profundo e reengenharia de fluxos operacionais para eliminar atritos, retrabalho e dependência excessiva de pessoas-chave. Criamos rotinas claras, matriz de responsabilidades e procedimentos operacionais padronizados (SOPs) que garantem consistência sem inchar a equipe.',
+    deliverables: [
+      'Mapeamento de jornada operacional ponta a ponta',
+      'Matriz de responsabilidades (RACI) e SLAs internos',
+      'Padronização de rotinas e procedimentos (SOPs)',
+      'Otimização de handovers e eliminação de desperdícios'
+    ],
+    tag: 'MENOS FRICÇÃO. MAIS FLUIDEZ.'
+  },
+  {
+    icon: ChartNoAxesCombined,
+    title: 'Indicadores de gestão e estratégia',
+    lead: 'Conectando o planejamento executivo à disciplina diária.',
+    text: 'Implantação de painéis de controle, metas em cascata e rotinas de acompanhamento baseadas em dados confiáveis. Traduzimos metas estratégicas globais em indicadores tangíveis para cada setor, capacitando a liderança a identificar desvios precocemente e tomar decisões com clareza.',
+    deliverables: [
+      'Construção de painéis executivos e operacionais (dashboards)',
+      'Desdobramento de metas por área em cascata (OKRs / KPIs)',
+      'Rituais de acompanhamento e cadência de governança',
+      'Análise de desvios e planos de ação corretivos'
+    ],
+    tag: 'CLAREZA PARA DECIDIR'
+  },
+  {
+    icon: ScanLine,
+    title: 'Governança e entrega de projetos',
+    lead: 'Previsibilidade, marcos rigorosos e cadência consistente.',
+    text: 'Estruturação de metodologias práticas de condução de projetos adaptadas à maturidade do negócio. Estabelecemos critérios claros de priorização de backlog, critérios formais de aceite e comitês de reporte com transparência para assegurar entregas no prazo e no escopo contratado.',
+    deliverables: [
+      'Critérios formais de priorização e gestão de backlog',
+      'Marcos de acompanhamento com critérios de aceite',
+      'Comitês de reporte executivo e transparência por stakeholder',
+      'Gestão ativa de riscos, prazos e entregáveis críticos'
+    ],
+    tag: 'DIREÇÃO PARA ENTREGAR'
+  },
 ];
 
 const experiences = [
-  ['Estruturação de startups', 'Estruturação da Concept Brains e da Watch Safe desde o início, passando pela validação de mercado, construção do MVP, roadmap de entregáveis, seleção de fornecedores de tecnologia e definição do modelo de receita.', 'VALIDAÇÃO · MVP · ROADMAP'],
-  ['Indicadores de gestão', 'Implantação de indicadores e desdobramento de metas por área, conectando objetivos estratégicos à execução operacional.', 'INDICADORES · METAS · EXECUÇÃO'],
-  ['Inteligência de mercado', 'Condução de análise de mercado, definição de público-alvo e construção de régua de comunicação por stakeholder para reporte de evolução.', 'MERCADO · PÚBLICO · COMUNICAÇÃO'],
-  ['Governança de projetos', 'Estruturação de critérios de priorização, marcos de acompanhamento e critérios de aceite.', 'PRIORIZAÇÃO · MARCOS · ENTREGAS'],
+  [
+    'Estruturação de startups do zero',
+    'Estruturação integral da Concept Brains e da Watch Safe desde o estágio embrionário. Condução da validação de mercado, desenho de requisitos funcionais para o MVP, contratação e coordenação de squads de tecnologia, além da definição de modelo de receita e precificação.',
+    'VALIDAÇÃO · MVP · ROADMAP'
+  ],
+  [
+    'Indicadores e desdobramento de metas',
+    'Implementação de rotinas de gestão por indicadores em empresas de diferentes portes. Desdobramento de objetivos estratégicos da diretoria em metas operacionais por departamento, com rituais semanais de acompanhamento e correção de rota.',
+    'INDICADORES · METAS · EXECUÇÃO'
+  ],
+  [
+    'Inteligência de mercado e stakeholders',
+    'Condução de análises competitivas, definição de proposta de valor por público-alvo e construção de réguas de comunicação e prestação de contas estruturadas para comitês, acionistas e investidores.',
+    'MERCADO · PÚBLICO · COMUNICAÇÃO'
+  ],
+  [
+    'Governança de projetos corporativos',
+    'Estruturação de escritórios de projetos (PMO prático) com critérios de aceite formais, mitigação de riscos contratuais e coordenação de iniciativas multifuncionais em paralelo.',
+    'PRIORIZAÇÃO · MARCOS · ENTREGAS'
+  ],
 ];
 
 const steps = [
-  ['Diagnóstico', 'Entendimento do cenário atual, identificação de gargalos e oportunidades.'],
-  ['Estruturação', 'Desenho de processos, definição de prioridades, indicadores e responsabilidades.'],
-  ['Implementação', 'Organização das entregas, acompanhamento de projetos e coordenação das iniciativas.'],
-  ['Evolução', 'Monitoramento dos indicadores, avaliação de resultados e ajustes operacionais.'],
+  ['Diagnóstico profundo', 'Imersão no cenário atual, mapeamento de rotinas, identificação de gargalos reais e definição de prioridades imediatas.'],
+  ['Estruturação metodológica', 'Desenho de fluxos, definição de critérios de aceite, alocação de responsabilidades e implantação de indicadores de controle.'],
+  ['Implementação & Cadência', 'Organização das sprints de entrega, coordenação das iniciativas, acompanhamento próximo e remoção ativa de impedimentos.'],
+  ['Evolução & Autonomia', 'Avaliação contínua de resultados, calibração de métricas, transferência de método e autonomia para a operação interna.'],
 ];
 
 const clientLogos = [
@@ -187,17 +251,26 @@ export default function Home() {
             </div>
             <div className="section-heading" data-reveal>
               <h2>Estrutura para avançar.<br /><em>Método para evoluir.</em></h2>
-              <p>Quatro frentes conectadas por um propósito:<br className="desktop-break" /> transformar complexidade em entregas objetivas.</p>
+              <p>Quatro frentes conectadas por um propósito:<br className="desktop-break" /> transformar complexidade operacional em entregas objetivas, previsíveis e com impacto direto no resultado.</p>
             </div>
             <div className="services-grid">
-              {services.map(({ icon: Icon, title, text, tag }, i) => (
+              {services.map(({ icon: Icon, title, lead, text, deliverables, tag }, i) => (
                 <article className="service-card" key={title} data-reveal style={{ '--delay': `${i * 70}ms` } as React.CSSProperties}>
                   <div className="card-top">
                     <Icon size={30} strokeWidth={1.1} aria-hidden="true" />
                     <span>0{i + 1}</span>
                   </div>
                   <h3>{title}</h3>
-                  <p>{text}</p>
+                  <p className="service-lead">{lead}</p>
+                  <p className="service-text">{text}</p>
+                  <ul className="service-deliverables">
+                    {deliverables.map(item => (
+                      <li key={item}>
+                        <Check size={14} aria-hidden="true" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="card-bottom">
                     {tag}
                     <span aria-hidden="true">+</span>
@@ -284,12 +357,81 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 04 / METODOLOGIA */}
+        {/* 04 / RESULTADOS & IMPACTO MENSURÁVEL */}
+        <section id="resultados" className="results section-light">
+          <div className="container">
+            <div className="section-label" data-reveal>
+              <span>MÉTRICAS &amp; IMPACTO</span>
+              <span>04 / RESULTADOS</span>
+            </div>
+
+            <div className="section-heading" data-reveal>
+              <h2>Impacto mensurável.<br /><em>Eficiência em números.</em></h2>
+              <p>
+                Método estruturado não é teoria: traduz-se em redução comprovada de gargalos, ganho de capacidade produtiva e previsibilidade de caixa e entregas.
+              </p>
+            </div>
+
+            {/* Metric Cards Grid */}
+            <div className="metrics-grid" data-reveal>
+              <div className="metric-card">
+                <span className="metric-number">+35%</span>
+                <h4>Ganho em Eficiência</h4>
+                <p>Redução média no tempo de ciclo operacional e eliminação de retrabalho após o redesenho de processos e rotinas.</p>
+              </div>
+              <div className="metric-card">
+                <span className="metric-number">02</span>
+                <h4>Startups Estruturadas</h4>
+                <p>Da tese e validação ao MVP funcional, contratação de fornecedores tech e modelo de monetização ativo.</p>
+              </div>
+              <div className="metric-card">
+                <span className="metric-number">100%</span>
+                <h4>Visibilidade de Entregas</h4>
+                <p>Rastreabilidade de metas por sprint, matriz de priorização e critérios de aceite formais implantados.</p>
+              </div>
+              <div className="metric-card">
+                <span className="metric-number">Zero</span>
+                <h4>Inchaço de Estrutura</h4>
+                <p>Crescimento de capacidade operacional sem necessidade de contratações desnecessárias ou aumento fixo de custo.</p>
+              </div>
+            </div>
+
+            {/* Results Editorial Showcase with Photo */}
+            <div className="results-feature-card" data-reveal>
+              <div className="results-feature-content">
+                <span className="mini-label">MÉTODO, CADÊNCIA E EXECUÇÃO</span>
+                <h3>Rituais práticos que conectam a estratégia à operação</h3>
+                <p>
+                  Consultorias tradicionais costumam entregar diagnósticos densos que acabam esquecidos em gavetas. Na Andriatto &amp; Co., nosso foco é a implementação direta: desenhamos rotinas executáveis, desdobramos metas claras por área e estabelecemos comitês de acompanhamento periódico para assegurar que cada iniciativa seja concluída com precisão.
+                </p>
+                <ul className="results-check-list">
+                  <li><Check size={16} aria-hidden="true" /> SLAs internos e procedimentos padronizados (SOPs) que eliminam dependência de indivíduos</li>
+                  <li><Check size={16} aria-hidden="true" /> Dashboards e painéis de indicadores em tempo real para tomada de decisão fundamentada</li>
+                  <li><Check size={16} aria-hidden="true" /> Envolvimento direto do consultor em todas as etapas, da concepção à entrega final</li>
+                </ul>
+              </div>
+              <figure className="results-feature-image">
+                <img
+                  src="/photo-results.jpg"
+                  alt="Alinhamento executivo de resultados, indicadores e metas operacionais"
+                  width="1100"
+                  height="480"
+                />
+                <figcaption>
+                  <span>DIAGNÓSTICO &amp; PERFORMANCE</span>
+                  <span>Acompanhamento sistemático e evolução contínua dos indicadores.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        {/* 05 / METODOLOGIA */}
         <section id="metodologia" className="method section-dark">
           <div className="container">
             <div className="section-label" data-reveal>
               <span>NOSSA METODOLOGIA</span>
-              <span>04 / O CAMINHO</span>
+              <span>05 / O CAMINHO</span>
             </div>
             <div className="section-heading" data-reveal>
               <h2>Método para transformar<br /> planos em <em>entregas.</em></h2>
@@ -312,12 +454,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 05 / MODELO DE ATUAÇÃO */}
+        {/* 06 / MODELO DE ATUAÇÃO */}
         <section className="model section-light" id="modelo">
           <div className="container">
             <div className="section-label" data-reveal>
               <span>MODELO DE ATUAÇÃO</span>
-              <span>05 / INDEPENDÊNCIA</span>
+              <span>06 / INDEPENDÊNCIA</span>
             </div>
             <div className="model-grid">
               <figure className="portrait" data-reveal>
@@ -372,12 +514,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 06 / CONTATO */}
+        {/* 07 / CONTATO */}
         <section id="contato" className="contact section-light">
           <div className="container">
             <div className="section-label" data-reveal>
               <span>VAMOS CONVERSAR</span>
-              <span>06 / CONTATO</span>
+              <span>07 / CONTATO</span>
             </div>
             <div className="contact-grid">
               <div className="contact-copy" data-reveal>

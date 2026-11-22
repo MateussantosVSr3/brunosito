@@ -8,6 +8,7 @@ export const navigation = [
   { label: 'Início', href: '#inicio' },
   { label: 'Atuação', href: '#atuacao' },
   { label: 'Experiência', href: '#experiencia' },
+  { label: 'Resultados', href: '#resultados' },
   { label: 'Metodologia', href: '#metodologia' },
   { label: 'Contato', href: '#contato' },
 ];
