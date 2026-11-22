@@ -405,17 +405,17 @@ export default function Home() {
             {/* Metric Cards Grid */}
             <div className="metrics-grid" data-reveal>
               <div className="metric-card">
-                <span className="metric-number">+35%</span>
+                <span className="metric-number" data-counter="35" data-prefix="+" data-suffix="%">+35%</span>
                 <h4>Ganho em Eficiência</h4>
                 <p>Redução média no tempo de ciclo operacional e eliminação de retrabalho após o redesenho de processos e rotinas.</p>
               </div>
               <div className="metric-card">
-                <span className="metric-number">02</span>
+                <span className="metric-number" data-counter="2" data-prefix="0">02</span>
                 <h4>Startups Estruturadas</h4>
                 <p>Da tese e validação ao MVP funcional, contratação de fornecedores tech e modelo de monetização ativo.</p>
               </div>
               <div className="metric-card">
-                <span className="metric-number">100%</span>
+                <span className="metric-number" data-counter="100" data-suffix="%">100%</span>
                 <h4>Visibilidade de Entregas</h4>
                 <p>Rastreabilidade de metas por sprint, matriz de priorização e critérios de aceite formais implantados.</p>
               </div>

@@ -577,3 +577,131 @@
     gap: 12px;
   }
 }
+
+
+/* ==========================================================================
+   INTERACTIVE ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Hero Geometric Dynamic Rotation & Float */
+.orbit {
+  animation: orbit-spin 50s linear infinite;
+  transform-origin: center;
+}
+.orbit-two {
+  animation: orbit-spin-rev 38s linear infinite;
+  transform-origin: center;
+}
+.geometric-mark {
+  animation: geom-float 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-spin-rev {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes geom-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+/* Button Hover Shimmer Effect */
+.button-gold {
+  position: relative;
+  overflow: hidden;
+}
+.button-gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+.button-gold:hover::after {
+  left: 150%;
+  transition: left 0.75s ease-in-out;
+}
+
+/* Card Hover Elevation & Subtle Glow */
+.service-card {
+  transition: background 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.035) !important;
+  transform: translateY(-7px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(201, 154, 50, 0.35) !important;
+}
+
+.company-logo-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease !important;
+}
+.company-logo-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 16px 32px rgba(11, 17, 32, 0.08) !important;
+}
+.company-logo-card .logo-img-wrapper img {
+  transition: transform 0.35s ease;
+}
+.company-logo-card:hover .logo-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.metric-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease !important;
+}
+.metric-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 16px 32px rgba(11, 17, 32, 0.08) !important;
+}
+
+/* Image Transitions on Editorial Cards */
+.position-editorial-media img,
+.services-banner-media img,
+.results-feature-image img,
+.editorial-feature-image img,
+.contact-image-card img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.position-editorial-card:hover .position-editorial-media img {
+  transform: scale(1.03) !important;
+}
+.services-visual-banner:hover .services-banner-media img {
+  transform: scale(1.03) !important;
+}
+.results-feature-card:hover .results-feature-image img {
+  transform: scale(1.03) !important;
+}
+.editorial-feature-card:hover .editorial-feature-image img {
+  transform: scale(1.03) !important;
+}
+.contact-image-card:hover img {
+  transform: scale(1.025) !important;
+}
+
+/* Method Step Interactive Elevation */
+.method-step {
+  transition: transform 0.3s ease;
+}
+.method-step:hover {
+  transform: translateY(-4px);
+}
+.method-step .step-dot {
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.method-step:hover .step-dot {
+  background: var(--gold-light) !important;
+  border-color: var(--gold-light) !important;
+  box-shadow: 0 0 14px rgba(224, 184, 79, 0.6) !important;
+}

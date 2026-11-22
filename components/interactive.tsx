@@ -43,9 +43,44 @@ export function MotionEffects() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const elements = document.querySelectorAll<HTMLElement>('[data-reveal]');
     let observer: IntersectionObserver | undefined;
+    let counterObserver: IntersectionObserver | undefined;
+
     if (!reduced.matches) {
-      observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer?.unobserve(entry.target); } }), { threshold: 0.08 });
+      observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer?.unobserve(entry.target);
+        }
+      }), { threshold: 0.08 });
       elements.forEach(el => { el.classList.add('will-reveal'); observer?.observe(el); });
+
+      // Metric Counter Animation
+      const counters = document.querySelectorAll<HTMLElement>('[data-counter]');
+      counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const target = parseInt(el.getAttribute('data-counter') || '0', 10);
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 1400;
+            const startTime = performance.now();
+
+            const step = (now: number) => {
+              const progress = Math.min((now - startTime) / duration, 1);
+              // easeOutExpo curve
+              const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+              const current = Math.round(ease * target);
+              const formatted = prefix === '0' && current < 10 ? `0${current}` : `${prefix}${current}`;
+              el.innerText = `${formatted}${suffix}`;
+              if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+            counterObserver?.unobserve(el);
+          }
+        });
+      }, { threshold: 0.3 });
+      counters.forEach(c => counterObserver?.observe(c));
     }
     let frame = 0;
     const update = () => {
@@ -58,7 +93,14 @@ export function MotionEffects() {
     const scroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     const change = () => { if (reduced.matches) elements.forEach(el => el.classList.add('visible')); };
     update(); window.addEventListener('scroll', scroll, { passive: true }); window.addEventListener('resize', scroll); reduced.addEventListener('change', change);
-    return () => { observer?.disconnect(); window.removeEventListener('scroll', scroll); window.removeEventListener('resize', scroll); reduced.removeEventListener('change', change); cancelAnimationFrame(frame); };
+    return () => {
+      observer?.disconnect();
+      counterObserver?.disconnect();
+      window.removeEventListener('scroll', scroll);
+      window.removeEventListener('resize', scroll);
+      reduced.removeEventListener('change', change);
+      cancelAnimationFrame(frame);
+    };
   }, []);
   return <div className="reading-progress" aria-hidden="true" />;
 }
