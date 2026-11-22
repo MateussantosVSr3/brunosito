@@ -7,3 +7,275 @@
 @media(max-width:700px){html{scroll-padding-top:100px}.container{width:calc(100% - 44px)}.header-inner{padding-inline:18px}.hero-grid{grid-template-columns:1fr;padding-top:45px;padding-bottom:30px;gap:5px}.hero h1{font-size:clamp(2.55rem,8.6vw,3.7rem);margin-top:24px;line-height:1.18}.hero .eyebrow{font-size:.63rem;letter-spacing:.1em;max-width:none}.hero-description{max-width:400px}.hero-actions{gap:23px;margin-top:29px}.hero-actions .button{font-size:.78rem;padding-inline:17px}.hero-actions .text-link{font-size:.8rem}.hero-art{width:70%;max-width:310px;margin:32px auto 25px;aspect-ratio:1}.geometry-label{font-size:.5rem}.hero-bottom{padding-block:20px;font-size:.53rem;gap:15px}.hero-bottom>a{font-size:.65rem;gap:10px}.position,.experience,.model,.contact{padding:55px 0 65px}.section-label{font-size:.625rem;letter-spacing:.09em;margin-bottom:36px;padding-top:18px;gap:12px}.section-label>span:first-child{gap:8px}.section-label>span:first-child:before{width:12px}h2{font-size:2.5rem}.position-grid,.model-grid,.contact-grid{grid-template-columns:1fr;gap:40px}.position .body-copy{font-size:.95rem;margin-top:24px}.process-art{height:140px;margin-bottom:20px;max-width:420px;margin-inline:auto}.pillars h3{font-size:1rem}.pillars>div{padding:18px 0}.services,.method{padding:55px 0 65px}.section-heading{display:block;margin-bottom:35px}.section-heading>p{margin-top:22px;max-width:400px;font-size:.9rem}.services-grid{grid-template-columns:1fr}.service-card{padding:28px}.service-card:nth-child(even){border-left:1px solid #ffffff24}.service-card:nth-child(n+2){border-top:0}.service-card h3{font-size:1.4rem}.card-top{margin-bottom:25px}.service-card p{margin-bottom:25px}.card-bottom{font-size:.65rem}.experience-row{grid-template-columns:48px 1fr;gap:10px 17px;padding:28px 0}.experience-number{font-size:2rem;grid-row:1/3}.experience-row h3{font-size:1.2rem;padding-top:3px;max-width:none}.experience-row>div{grid-column:2}.experience-row p{font-size:.9rem}.experience-row>svg{display:none}.experience-row .mini-label{font-size:.6rem;margin-top:15px}.experience-context{margin-top:32px}.experience-context>p{font-size:.75rem}.experience-context>div{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:1.15rem}.method-steps{grid-template-columns:1fr;margin-top:38px;gap:32px}.method-steps:before,.method-steps:after{width:1px;height:auto;top:12px;bottom:0;left:6px;right:auto}.method-steps:after{transform:scaleY(var(--method-progress));transform-origin:top}.method-step{padding-left:40px;display:grid;grid-template-columns:40px 1fr;gap:8px 15px;position:relative}.step-number{font-size:1.5rem;grid-row:1/3}.step-dot{position:absolute;top:11px;left:2px;margin:0}.method-step h3{font-size:1.2rem;margin-bottom:0}.method-step p{grid-column:2;max-width:none;font-size:.9rem}.method-note{display:block;margin-top:35px;font-size:.75rem}.method-note>span{display:block;margin-top:10px;font-size:.6rem}.portrait{max-width:380px;width:100%;margin-inline:auto}.model h2{font-size:2.25rem}.model-copy>p{margin-top:24px}.closing-inner{padding-block:65px}.closing h2{font-size:2.4rem}.closing .eyebrow{font-size:.6rem}.closing-art{right:-330px;top:70px;opacity:.12}.closing-copy>p:not(.eyebrow){font-size:.9rem;max-width:280px}.contact-copy h2{font-size:2.5rem}.contact-details{margin-top:30px}.contact-grid{gap:38px}.field-row{grid-template-columns:1fr 1fr;gap:20px}.contact-form input,.contact-form select,.contact-form textarea{font-size:1rem}.contact-form label{font-size:.8rem}.form-bottom{flex-direction:column;gap:20px}.form-bottom .button{width:100%}.footer{padding-top:30px}.footer-top{grid-template-columns:1fr 1fr;gap:30px 20px;padding-bottom:30px}.footer-contact{grid-column:1/-1;padding-top:0;gap:15px}.footer-top nav{padding-top:10px}.footer-top p{font-size:.75rem}.footer .brand img{width:120px}.footer-bottom{font-size:.65rem;line-height:1.7}.brand-footer{margin-left:-10px}.desktop-break{display:none}.hero h1 .desktop-break{display:block}}
 @media(max-width:380px){.container{width:calc(100% - 36px)}.hero h1{font-size:2.4rem}.hero-actions{gap:15px}.hero-actions .button{padding-inline:13px}.hero-actions .text-link{font-size:.75rem}.field-row{grid-template-columns:1fr;gap:0}.hero-bottom{font-size:.5rem}.hero-bottom>a{font-size:.6rem}h2,.closing h2,.contact-copy h2{font-size:2.15rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.will-reveal{opacity:1;transform:none}.service-card:hover{transform:none}.button:hover{transform:none}}
+
+/* ==========================================================================
+   ENHANCED VISUAL ASSETS & COMPANY LOGOS
+   ========================================================================== */
+
+/* Architecture Showcase Banner */
+.position-showcase {
+  margin-top: 55px;
+}
+.showcase-banner {
+  position: relative;
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--navy);
+  overflow: hidden;
+}
+.showcase-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.95) contrast(1.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.showcase-banner:hover img {
+  transform: scale(1.015);
+}
+.showcase-banner figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 24px;
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  color: #555d6b;
+}
+.showcase-banner figcaption .mini-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8a744b;
+}
+.showcase-banner figcaption p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4c5460;
+}
+.showcase-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+/* Editorial Feature Card */
+.editorial-feature-card {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  overflow: hidden;
+  align-items: stretch;
+}
+.editorial-feature-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  background: var(--navy);
+}
+.editorial-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.editorial-feature-card:hover .editorial-feature-image img {
+  transform: scale(1.02);
+}
+.editorial-feature-content {
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.editorial-feature-content .mini-label {
+  color: #8a744b;
+  margin-bottom: 12px;
+}
+.editorial-feature-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.editorial-feature-content p {
+  font-size: 0.925rem;
+  line-height: 1.85;
+  color: #5b626e;
+}
+
+/* Company Logos Showcase */
+.experience-showcase {
+  margin-top: 60px;
+  padding-top: 45px;
+  border-top: 1px solid var(--line);
+}
+.experience-context-header {
+  margin-bottom: 26px;
+}
+.experience-context-header .mini-label {
+  color: #8a744b;
+  display: block;
+  margin-bottom: 8px;
+}
+.experience-context-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.experience-context-header .context-desc {
+  font-size: 0.925rem;
+  color: #6b7280;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.company-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+.company-logo-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  min-height: 185px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.company-logo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(11, 17, 32, 0.07);
+}
+.logo-img-wrapper {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 6px;
+}
+.logo-img-wrapper img {
+  max-height: 50px;
+  max-width: 155px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+.company-info {
+  margin-top: 16px;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  padding-top: 14px;
+  width: 100%;
+}
+.company-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.company-role {
+  display: block;
+  font-size: 0.725rem;
+  color: #78808d;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.company-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 8px;
+  background: #fbf9f4;
+  border: 1px solid #ebd9ab;
+  color: #8b6b29;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+}
+
+/* Contact Advisory Photo Card */
+.contact-image-card {
+  margin-top: 32px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.contact-image-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9.5;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.02);
+}
+.contact-image-card figcaption {
+  padding: 12px 18px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+.contact-image-card .mini-label {
+  color: #8a744b;
+}
+
+@media (max-width: 1150px) {
+  .editorial-feature-card {
+    grid-template-columns: 1fr;
+  }
+  .editorial-feature-image {
+    min-height: 260px;
+  }
+  .company-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .company-logo-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .editorial-feature-content {
+    padding: 28px 20px;
+  }
+  .showcase-banner figcaption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .contact-image-card figcaption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
